@@ -2,7 +2,7 @@ Write-Host 'Installing and configuring Chocolatey...'
 
 . "$PSScriptRoot\Utils.ps1"
 
-Function Install-Chocolatey {
+Function udf_InstallChocolateyAsAdmin {
     
     if (-not (Test-Command choco)) {
         Write-Output "Installing Chocolatey..."
@@ -37,4 +37,4 @@ Function Install-Chocolatey {
 
     Import-ChocolateyModule
 }
-Install-Chocolatey
+udf_InstallChocolateyAsAdmin
